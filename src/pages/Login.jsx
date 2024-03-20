@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import clsx from "clsx";
 import toast from "react-hot-toast";
 import Form from "../components/form";
 import { Input, Button } from "../components/shared";
+import { EyeOpenIcon, EyeClosedIcon } from "@radix-ui/react-icons";
 import loginUser from "../lib/api/loginUser";
 import CakeImg from "../assets/form-cake.png";
 
 const Login = () => {
-  //   const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -15,9 +17,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  //   const togglePasswordVisbility = () => {
-  //     setShowPassword(!showPassword);
-  //   };
+  const togglePasswordVisbility = (e) => {
+    e.preventDefault();
+    setShowPassword(!showPassword);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +42,7 @@ const Login = () => {
       });
 
       if (data.error) {
-        toast.error("data.error", {
+        toast.error(data.error, {
           position: "top-center",
         });
       } else {
@@ -57,10 +60,14 @@ const Login = () => {
   return (
     <div className="Login flex h-screen">
       <section className="w-3/5">
-        <img src={CakeImg} alt="" className="h-full w-full object-cover" />
+        <img
+          src={CakeImg}
+          alt="Cupcake"
+          className="h-full w-full object-cover "
+        />
       </section>
 
-      <section className=" w-screen border flex flex-col gap-10 justify-center items-center">
+      <section className="w-screen flex flex-col gap-10 justify-center items-center">
         <div className="md:w-[35rem] flex flex-col gap-10">
           <div>
             <h1 className="text-3xl font-bold">Login</h1>
@@ -72,7 +79,7 @@ const Login = () => {
             className="flex flex-col gap-4"
           >
             <Input
-              type="text"
+              type="email"
               label="Email Address"
               name="email"
               value={formData.email}
@@ -81,9 +88,9 @@ const Login = () => {
               placeholder="Enter Email"
             />
 
-            <div className="passwordBox">
+            <div className="passwordBox relative">
               <Input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 label="Password"
                 name="password"
                 value={formData.password}
@@ -91,6 +98,13 @@ const Login = () => {
                 variant="primary"
                 placeholder="Enter Password"
               />
+
+              <button
+                onClick={togglePasswordVisbility}
+                className="absolute top-6 bottom-0 right-0 pr-6"
+              >
+                {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+              </button>
             </div>
             <p>
               <Link to="/resetPassword" className="hover:text-primary-300">
@@ -101,9 +115,14 @@ const Login = () => {
             <Button
               type="submit"
               variant="primary"
-              className="mt-6 hover:bg-primary-600"
+              disabled={!formData.email || !formData.password}
+              className={clsx("mt-6", "hover:bg-primary-600", {
+                "disabled:bg-red-800": !formData.email || !formData.password,
+              })}
             >
-              Login
+              {formData.email && formData.password
+                ? "Login"
+                : "Incomplete Form..."}
             </Button>
           </Form>
         </div>
@@ -113,7 +132,7 @@ const Login = () => {
         </div>
 
         <p>
-          {"Don't"} have an account?{" "}
+          {"Don't"} have an account? {""}
           <Link
             to="/signup"
             className="text-primary-400 font-semibold hover:text-primary-600"
