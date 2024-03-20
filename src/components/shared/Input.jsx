@@ -1,4 +1,4 @@
-function Input({
+const Input = ({
   type,
   id,
   name,
@@ -7,10 +7,10 @@ function Input({
   onChangeHandler,
   value,
   className,
-}) {
+}) => {
   return (
-    <label htmlFor={id}>
-      {label}
+    <div className="flex flex-col">
+      <label htmlFor={id}>{label}</label>
       <input
         type={type}
         id={id}
@@ -20,8 +20,8 @@ function Input({
         onChange={onChangeHandler}
         className={className}
       />
-    </label>
+    </div>
   );
-}
+};
 
 export default Input;
