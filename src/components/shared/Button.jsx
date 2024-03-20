@@ -1,10 +1,10 @@
 import clsx from "clsx";
 
 const Button = ({ type, children, variant, className, onClickHandler }) => {
-  const baseStyle = "border-2 border-black px-3";
+  const baseStyle = "border-2 py-2 w-full rounded-lg";
 
   const variantStyles = {
-    primary: "text-emerald-500",
+    primary: "text-white bg-primary-300",
     secondary: "text-gray-900 bg-lime-600",
     unique: "text-purple-900 bg-lime-600",
   };
