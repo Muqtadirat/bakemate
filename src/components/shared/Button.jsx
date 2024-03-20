@@ -1,7 +1,14 @@
 import clsx from "clsx";
 
-const Button = ({ type, children, variant, className, onClickHandler }) => {
-  const baseStyle = "border-2 py-2 w-full rounded-lg";
+const Button = ({
+  type,
+  children,
+  disabled,
+  variant,
+  className,
+  onClickHandler,
+}) => {
+  const baseStyle = "border-2 border-transparent py-2 w-full rounded-lg";
 
   const variantStyles = {
     primary: "text-white bg-primary-300",
@@ -14,7 +21,12 @@ const Button = ({ type, children, variant, className, onClickHandler }) => {
   const customStyle = clsx(baseStyle, variantStyle, className);
 
   return (
-    <button type={type} className={customStyle} onClick={onClickHandler}>
+    <button
+      type={type}
+      disabled={disabled}
+      className={customStyle}
+      onClick={onClickHandler}
+    >
       {children}
     </button>
   );
