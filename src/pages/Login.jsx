@@ -120,9 +120,7 @@ const Login = () => {
                 "disabled:bg-red-800": !formData.email || !formData.password,
               })}
             >
-              {formData.email && formData.password
-                ? "Login"
-                : "Incomplete Form..."}
+              Login
             </Button>
           </Form>
         </div>
