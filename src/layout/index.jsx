@@ -8,11 +8,11 @@ const Layout = ({ children }) => {
         <Sidebar />
       </aside>
 
-      <main className="flex-1 px-10 py-4">
-        <header className="h-14">
+      <main className="flex-1 py-4">
+        <header className="h-14 pb-16 border-b-2">
           <Topbar />
         </header>
-        <div className="mt-8">{children}</div>
+        <div className="mt-8 mx-10">{children}</div>
       </main>
     </div>
   );
