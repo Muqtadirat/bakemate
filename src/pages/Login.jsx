@@ -4,7 +4,7 @@ import clsx from "clsx";
 import toast from "react-hot-toast";
 import Form from "../components/form";
 import { Input, Button } from "../components/shared";
-import { EyeOpenIcon, EyeClosedIcon } from "@radix-ui/react-icons";
+import { Eye, EyeOff } from "lucide-react";
 import loginUser from "../lib/api/loginUser";
 import CakeImg from "../assets/form-cake.png";
 
@@ -50,7 +50,7 @@ const Login = () => {
         toast.success("Login successful", {
           position: "top-center",
         });
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (error) {
       console.log(error);
@@ -103,7 +103,11 @@ const Login = () => {
                 onClick={togglePasswordVisbility}
                 className="absolute top-6 bottom-0 right-0 pr-6"
               >
-                {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+                {showPassword ? (
+                  <EyeOff size={18} />
+                ) : (
+                  <Eye size={18} />
+                )}
               </button>
             </div>
             <p>
