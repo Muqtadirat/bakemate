@@ -16,7 +16,7 @@ const Input = ({
   const variantStyles = {
     primary:
       "focus:outline-none focus:ring-1 focus:border-primary-200 focus:ring-primary-200",
-    search: "w-[24rem]",
+    search: "w-[25rem]",
   };
 
   const variantStyle = variantStyles[variant] || "";

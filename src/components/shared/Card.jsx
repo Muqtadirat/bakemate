@@ -1,20 +1,29 @@
 import { Card } from "@radix-ui/themes";
-import { LineChart, ArrowUpIcon } from "lucide-react";
+import { TrendingDown, TrendingUp } from "lucide-react";
 
-const KPICard = ({ title, value }) => {
+const KPICard = ({ title, value, icon, trend, increase }) => {
   return (
-    <Card color="blue" className="w-64 h-24">
-      <div className="flex gap-8 items-center">
-        <div className="bg-primary-400 h-fit p-1">
-          <LineChart color="white" />
-        </div>
-        <div className="flex flex-col items-center gap-2 grow">
+    <Card color="blue" className="w-full py-4">
+      <div className="flex justify-between items-center">
+        <div className="h-fit p-1">{icon}</div>
+        <div className="flex flex-col gap-2 items-center">
           <p>{title}</p>
-          <p className="font-medium text-4xl">{value}</p>
+          <p className="font-medium text-2xl">{value}%</p>
         </div>
 
-        <div className="text-green-500 flex">
-          24% <ArrowUpIcon strokeWidth={1} />
+        <div
+          className={`${
+            increase ? "text-[#5ce23a]" : "text-[red]"
+          } flex items-center`}
+        >
+          {trend}%
+          <span className="ml-1">
+            {increase ? (
+              <TrendingUp height={16} />
+            ) : (
+              <TrendingDown height={16} />
+            )}
+          </span>
         </div>
       </div>
     </Card>
