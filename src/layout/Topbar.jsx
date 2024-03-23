@@ -1,13 +1,34 @@
-// import { MagnifyingGlassIcon, BellIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Search, BellDot } from "lucide-react";
 import { Input } from "../components/shared";
 import { Avatar } from "@radix-ui/themes";
 
 const Topbar = () => {
+  const location = useLocation();
+  const [pageTitle, setPageTitle] = useState("");
+
+  useEffect(() => {
+    const getTitleFromPathname = (pathname) => {
+      const titleMap = {
+        "/dashboard": "Dashboard",
+        "/orders": "Orders",
+        "/transactions": "Transactions",
+        "/products": "Products",
+        "/customer": "Customer",
+        "/notifications": "Notifications",
+        "/settings": "Settings",
+      };
+      return titleMap[pathname] || "";
+    };
+
+    setPageTitle(getTitleFromPathname(location.pathname));
+  }, [location.pathname]);
+
   return (
     <div className="flex justify-between items-center mx-10">
       <section className="flex gap-16 items-center">
-        <h1 className="font-semibold text-3xl">Dashboard</h1>
+        <h1 className="font-semibold text-3xl">{pageTitle}</h1>
 
         {/* Search bar */}
         <div className="relative">
