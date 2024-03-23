@@ -19,7 +19,7 @@ const Topbar = () => {
         "/notifications": "Notifications",
         "/settings": "Settings",
       };
-      return titleMap[pathname] || "";
+      return titleMap[pathname] || "Dashboard";
     };
 
     setPageTitle(getTitleFromPathname(location.pathname));
