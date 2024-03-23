@@ -6,5 +6,28 @@
       "email": "Bakemate@gmail.com",
       "password": "Bakery1"
     }
+  ],
+  "data": [
+    {
+      "totalSales": 12,
+      "totalCustomers": 4,
+      "totalOrders": 8,
+      "inventoryStatus": 32,
+      "salesAnalyticsGraph": {
+        "January": 9,
+        "Febuary": 4,
+        "March": 6,
+        "April": 7,
+        "May": 2,
+        "June": 4,
+        "July": 1,
+        "August": 3,
+        "September": 4,
+        "October": 5,
+        "November": 5,
+        "December": 2
+      },
+      "id": "3225"
+    }
   ]
 }
