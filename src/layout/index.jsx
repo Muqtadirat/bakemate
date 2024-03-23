@@ -3,16 +3,16 @@ import Topbar from "./Topbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="h-screen flex">
+    <div className="flex ">
       <aside>
         <Sidebar />
       </aside>
 
-      <main className="flex-1 py-4">
-        <header className="h-14 pb-16 border-b-2">
+      <main className=" w-screen ">
+        <header className="h-14 pt-4 pb-16 border-b-2">
           <Topbar />
         </header>
-        <div className="mt-8 mx-10">{children}</div>
+        <div className="pt-8 px-10 bg-[#FBF8F8]">{children}</div>
       </main>
     </div>
   );

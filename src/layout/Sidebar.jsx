@@ -62,7 +62,7 @@ const Sidebar = () => {
   return (
     <nav
       className={clsx(
-        "w-56 flex flex-col gap-6 pt-5 text-white bg-primary-800 h-full"
+        "w-56 flex flex-col h-full gap-6 pt-5 text-white bg-primary-800"
         // {
         //   "w-16": isCollapsed,
         //   "w-56": !isCollapsed,
