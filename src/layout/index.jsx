@@ -3,7 +3,7 @@ import Topbar from "./Topbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex ">
+    <div className="flex bg-snow ">
       <aside>
         <Sidebar />
       </aside>

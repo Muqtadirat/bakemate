@@ -11,7 +11,7 @@ const Button = ({
   const baseStyle = "border-2 border-transparent py-2 rounded-lg";
 
   const variantStyles = {
-    primary: "text-white bg-primary-300",
+    primary: "text-white bg-primary-800 rounded",
     secondary: "text-gray-900 bg-lime-600",
     unique: "text-purple-900 bg-lime-600",
   };
