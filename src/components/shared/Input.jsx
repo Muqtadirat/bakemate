@@ -11,7 +11,7 @@ const Input = ({
   className,
   variant,
 }) => {
-  const baseStyle = "w-full py-2 px-2 border-2 border-gray-700  rounded-lg";
+  const baseStyle = "py-2 px-2 border-2 border-gray-700 rounded-lg";
 
   const variantStyles = {
     primary:
