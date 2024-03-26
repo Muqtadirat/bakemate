@@ -8,7 +8,7 @@ const Button = ({
   className,
   onClickHandler,
 }) => {
-  const baseStyle = "border-2 border-transparent py-2 w-full rounded-lg";
+  const baseStyle = "border-2 border-transparent py-2 rounded-lg";
 
   const variantStyles = {
     primary: "text-white bg-primary-300",
