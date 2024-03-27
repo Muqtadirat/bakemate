@@ -19,7 +19,7 @@ export default {
         "grey-500": "#615C5A",
         "grey-600": "#3E3B3A",
         "grey-700": "#1F1D1C",
-        "snow": "#FFFAFA",
+        "peach-100": "#FBF8F8",
       },
     },
   },

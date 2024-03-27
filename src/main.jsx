@@ -6,8 +6,8 @@ import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./index.css";
 import { HomePage, ErrorPage, Login, SignUp, Dashboard } from "./pages";
-import { Settings } from "./components/dashboard";
-import CreateUser from "./components/dashboard/Settings/CreateUser";
+import { Settings, Products } from "./components/dashboard";
+import CreateUser from "./components/dashboard/settings/CreateUser";
 import Layout from "./layout";
 
 const router = createBrowserRouter([
@@ -39,11 +39,14 @@ const router = createBrowserRouter([
       {
         path: "settings",
         element: <Settings />,
-       
       },
       {
         path: "settings/createUser",
         element: <CreateUser />,
+      },
+      {
+        path: "products",
+        element: <Products />,
       },
     ],
   },

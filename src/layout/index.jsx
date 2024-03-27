@@ -3,12 +3,12 @@ import Topbar from "./Topbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex bg-snow ">
-      <aside>
+    <div className="flex relative bg-peach-100">
+      <aside className="fixed h-full">
         <Sidebar />
       </aside>
 
-      <main className=" w-screen ">
+      <main className="w-screen ml-[224px] pb-10">
         <header className="h-14 pt-4 pb-16 border-b-2">
           <Topbar />
         </header>
