@@ -80,7 +80,7 @@ export const products = [
     name: "Doughnut",
     category: "Pastries",
     price: 1000,
-    stock: 22,
+    stock: 12,
     created: "01/02/24",
     lastUpdated: "06/02/24",
     image:
