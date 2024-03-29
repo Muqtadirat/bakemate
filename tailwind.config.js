@@ -21,6 +21,7 @@ export default {
         "grey-700": "#1F1D1C",
         "peach-100": "#FBF8F8",
       },
+      fontFamily: {},
     },
   },
   plugins: [],

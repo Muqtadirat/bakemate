@@ -1,7 +1,7 @@
 import { UseGlobalContext } from "src/contexts/GlobalContext";
 import { Avatar, Popover, Separator } from "@radix-ui/themes";
 import { EllipsisVertical, PenLine, Trash2 } from "lucide-react";
-import { CheckBox } from "src/components/shared";
+import { CheckBox, Button } from "src/components/shared";
 
 const ProductsTable = ({
   product,
@@ -12,6 +12,7 @@ const ProductsTable = ({
   lastUpdated,
   image,
   checkId,
+  deleteProduct,
 }) => {
   const { checked, setChecked } = UseGlobalContext();
 
@@ -56,7 +57,9 @@ const ProductsTable = ({
           <div className="flex flex-col items-center w-full">
             <PenLine color="#59150E" size={20} />
             <Separator decorative className="my-2 bg-gray-500 w-10" />
-            <Trash2 color="#59150E" size={20} />
+            <Button onClickHandler={deleteProduct}>
+              <Trash2 color="#59150E" size={20} />
+            </Button>
           </div>
         </Popover.Content>
       </Popover.Root>

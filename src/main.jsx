@@ -8,6 +8,7 @@ import "./index.css";
 import { HomePage, ErrorPage, Login, SignUp, Dashboard } from "./pages";
 import { Settings, Products } from "./components/dashboard";
 import CreateUser from "./components/dashboard/settings/CreateUser";
+import AddProduct from "./components/dashboard/products/AddProduct";
 import Layout from "./layout";
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "products/addProduct",
+        element: <AddProduct />,
       },
     ],
   },
