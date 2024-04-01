@@ -28,7 +28,7 @@ const Topbar = () => {
   return (
     <div className="flex justify-between items-center mx-10">
       <section className="flex gap-16 items-center">
-        <h1 className="font-semibold text-3xl">{pageTitle}</h1>
+        <h1 className="font-medium text-3xl">{pageTitle}</h1>
 
         {/* Search bar */}
         <div className="relative">
