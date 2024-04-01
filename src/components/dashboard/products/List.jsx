@@ -86,10 +86,10 @@ const List = () => {
     }
   };
 
-   const deleteProduct = (id) => {
-     const newList = products.filter((task) => task.id !== id);
-     setProducts(newList);
-   };
+  //  const deleteProduct = (id) => {
+  //    const newList = products.filter((task) => task.id !== id);
+  //    setProducts(newList);
+  //  };
 
   const handlePageChange = (selected, tabId) => {
     setCurrentPages((prevPages) => ({
@@ -160,7 +160,7 @@ const List = () => {
                     lastUpdated={product.lastUpdated}
                     image={product.image}
                     checkId={product.id}
-                    deleteProduct={deleteProduct}
+                    // deleteProduct={deleteProduct}
                   />
                 </Skeleton>
               ))}
