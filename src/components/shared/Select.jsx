@@ -1,46 +1,19 @@
-import {
-  Label,
-  Button,
-  Select,
-  SelectValue,
-  Popover,
-  ListBox,
-  ListBoxItem,
-  FieldError,
-  Text,
-} from "react-aria-components";
-
-const Select =({
-  label,
-  description,
-  errorMessage,
-  children,
-  items,
-  ...props
-})=> {
+const Select = ({ label, id, name, children, onChangeHandler }) => {
   return (
-    <Select {...props}>
-      {label && <Label>{label}</Label>}
-      <Button>
-        <SelectValue />
-        <span aria-hidden="true">▼</span>
-      </Button>
-      {description && <Text slot="description">{description}</Text>}
-      <FieldError>{errorMessage}</FieldError>
-      <Popover>
-        <ListBox items={items}>{children}</ListBox>
-      </Popover>
-    </Select>
+    <div>
+      <label for="cars">
+        {label}
+        <select
+          name={name}
+          id={id}
+          onChange={onChangeHandler}
+          className="py-3 px-3 border-2 w-full border-grey-300 rounded-lg"
+        >
+          {children}
+        </select>
+      </label>
+    </div>
   );
-}
+};
 
-const SelectItem=({props})=>{
-  return (
-    <ListBoxItem
-      {...props}
-      className={({ isFocused, isSelected }) =>
-        `my-item ${isFocused ? "focused" : ""} ${isSelected ? "selected" : ""}`
-      }
-    />
-  );
-}
+export default Select;

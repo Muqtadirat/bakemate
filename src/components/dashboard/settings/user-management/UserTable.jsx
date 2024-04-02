@@ -1,5 +1,5 @@
 import { Avatar, Popover } from "@radix-ui/themes";
-import { GripVertical } from "lucide-react";
+import { EllipsisVertical } from "lucide-react";
 
 const UserTable = ({ name, mail, gender, role, number, active, avatar }) => {
   const status = active ? "Active" : "Inactive";
@@ -29,7 +29,7 @@ const UserTable = ({ name, mail, gender, role, number, active, avatar }) => {
         </div>
         <Popover.Root>
           <Popover.Trigger>
-            <GripVertical className="hover:cursor-pointer" />
+            <EllipsisVertical className="hover:cursor-pointer" />
           </Popover.Trigger>
 
           <Popover.Content>Edit</Popover.Content>
