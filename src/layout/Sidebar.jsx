@@ -26,11 +26,6 @@ const tabs = [
     Icon: <List size={18} strokeWidth={2.5} />,
   },
   {
-    title: "Transactions",
-    href: "transactions",
-    Icon: <Wallet size={18} strokeWidth={2.5} />,
-  },
-  {
     title: "Products",
     href: "products",
     Icon: <PackageSearch size={18} strokeWidth={2.5} />,
@@ -41,9 +36,9 @@ const tabs = [
     Icon: <UsersRound size={18} strokeWidth={2.5} />,
   },
   {
-    title: "Notifications",
-    href: "notifications",
-    Icon: <Bell size={18} strokeWidth={2.5} />,
+    title: "Transactions",
+    href: "transactions",
+    Icon: <Wallet size={18} strokeWidth={2.5} />,
   },
   {
     title: "Settings",

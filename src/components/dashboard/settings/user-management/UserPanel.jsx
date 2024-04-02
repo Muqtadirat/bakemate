@@ -1,11 +1,26 @@
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "src/components/shared";
 import UserTable from "./UserTable";
-import { subUsers } from "src/lib/constants";
+import fetchSubUsers from "src/lib/api/fetchSubUsers";
 
 const UserPanel = () => {
+  const [subUsers, setSubUsers] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    async function fetchSubUserData() {
+      try {
+        const data = await fetchSubUsers();
+        setSubUsers(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchSubUserData();
+  }, []);
 
   const createUser = (e) => {
     e.preventDefault();
@@ -14,7 +29,7 @@ const UserPanel = () => {
   };
 
   return (
-    <div>
+    <div className="mt-10">
       <div className="flex justify-between items-center">
         <p className="font-medium">All Users</p>
         <Button
@@ -29,8 +44,8 @@ const UserPanel = () => {
       </div>
 
       {/* Table */}
-      <div className="mt-16 px-5 pb-5">
-        <div className="border-b grid grid-cols-7 py-4 px-3">
+      <div className="mt-8 px-5 pb-5 pt-8 bg-white">
+        <div className="border-b grid grid-cols-7 py-4 px-3 text-grey-400 font-medium">
           <p>Full Name</p>
           <p>Email</p>
           <p>Phone Number</p>
@@ -43,7 +58,7 @@ const UserPanel = () => {
           return (
             <UserTable
               key={users.name}
-              name={users.name}
+              name={`${users.fname} ${users.lname}`}
               mail={users.email}
               number={users.number}
               role={users.role}

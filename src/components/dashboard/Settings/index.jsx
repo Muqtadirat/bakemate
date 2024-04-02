@@ -2,7 +2,8 @@ import { Outlet } from "react-router-dom";
 import { Tabs } from "@radix-ui/themes";
 import AccountSettings from "./AccountSettings";
 import Support from "./Support";
-import UserPanel from "./UserPanel";
+// import UserPanel from "./user-management/UserPanel";
+import UserManagement from "./user-management";
 
 const Settings = () => {
   return (
@@ -24,7 +25,7 @@ const Settings = () => {
           <AccountSettings />
         </Tabs.Content>
         <Tabs.Content value="user">
-          <UserPanel />
+         <UserManagement />
           <Outlet />
         </Tabs.Content>
         <Tabs.Content value="support">

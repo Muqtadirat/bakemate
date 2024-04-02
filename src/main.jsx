@@ -7,7 +7,7 @@ import "@radix-ui/themes/styles.css";
 import "./index.css";
 import { HomePage, ErrorPage, Login, SignUp, Dashboard } from "./pages";
 import { Settings, Products } from "./components/dashboard";
-import CreateUser from "./components/dashboard/settings/CreateUser";
+import CreateUser from "./components/dashboard/settings/user-management/CreateUser";
 import AddProduct from "./components/dashboard/products/AddProduct";
 import Layout from "./layout";
 

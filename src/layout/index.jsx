@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <header className="h-14 pt-4 pb-16 border-b-2">
           <Topbar />
         </header>
-        <div className="pt-8 px-10">{children}</div>
+        <div className="pt-4 px-10">{children}</div>
       </main>
     </div>
   );
