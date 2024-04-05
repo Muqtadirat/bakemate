@@ -6,9 +6,10 @@ import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./index.css";
 import { HomePage, ErrorPage, Login, SignUp, Dashboard } from "./pages";
-import { Settings, Products } from "./components/dashboard";
+import { Settings, Products, Orders } from "./components/dashboard";
 import CreateUser from "./components/dashboard/settings/user-management/CreateUser";
 import AddProduct from "./components/dashboard/products/AddProduct";
+import AddOrder from "./components/dashboard/orders/AddOrder";
 import Layout from "./layout";
 
 const router = createBrowserRouter([
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
         path: "dashboard",
         element: <Dashboard />,
       },
+      // Settings
       {
         path: "settings",
         element: <Settings />,
@@ -45,6 +47,7 @@ const router = createBrowserRouter([
         path: "settings/createUser",
         element: <CreateUser />,
       },
+      // Products
       {
         path: "products",
         element: <Products />,
@@ -52,6 +55,15 @@ const router = createBrowserRouter([
       {
         path: "products/addProduct",
         element: <AddProduct />,
+      },
+      // Orders
+      {
+        path: "orders",
+        element: <Orders />,
+      },
+      {
+        path: "orders/addOrder",
+        element: <AddOrder />,
       },
     ],
   },

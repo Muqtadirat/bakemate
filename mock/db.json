@@ -5,6 +5,11 @@
       "fullName": "Bake",
       "email": "Bakemate@gmail.com",
       "password": "Bakery1"
+    },
+    {
+      "id": "e614",
+      "email": "k@gmail.com",
+      "password": "Ijjjjjjj"
     }
   ],
   "data": [
@@ -185,6 +190,44 @@
       "role": "Admin",
       "active": true,
       "avatar": "https://i.pinimg.com/236x/06/f5/4e/06f54e0f48897f2c4e12a06f7af7eba5.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": "2090",
+      "customer": "Sugar Creme",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "Completed"
+    },
+    {
+      "id": "9811",
+      "customer": "Sugar Creme",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "Pending"
+    },
+    {
+      "id": "5233",
+      "customer": "Velvet",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "Cancelled"
+    },
+    {
+      "id": "3222",
+      "customer": "Sugar Creme",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "In progress"
     }
   ]
 }
