@@ -31,13 +31,13 @@ const tabs = [
     Icon: <PackageSearch size={18} strokeWidth={2.5} />,
   },
   {
-    title: "Customer",
-    href: "customer",
+    title: "Customers",
+    href: "customers",
     Icon: <UsersRound size={18} strokeWidth={2.5} />,
   },
   {
-    title: "Transactions",
-    href: "transactions",
+    title: "Transaction",
+    href: "transaction",
     Icon: <Wallet size={18} strokeWidth={2.5} />,
   },
   {

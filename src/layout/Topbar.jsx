@@ -15,8 +15,7 @@ const Topbar = () => {
         "/orders": "Orders",
         "/transactions": "Transactions",
         "/products": "Products",
-        "/customer": "Customer",
-        "/notifications": "Notifications",
+        "/customers": "Customers",
         "/settings": "Settings",
       };
       return titleMap[pathname] || "Dashboard";

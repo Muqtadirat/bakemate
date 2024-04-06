@@ -6,10 +6,11 @@ import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./index.css";
 import { HomePage, ErrorPage, Login, SignUp, Dashboard } from "./pages";
-import { Settings, Products, Orders } from "./components/dashboard";
+import { Settings, Products, Orders, Customers } from "./components/dashboard";
 import CreateUser from "./components/dashboard/settings/user-management/CreateUser";
 import AddProduct from "./components/dashboard/products/AddProduct";
 import AddOrder from "./components/dashboard/orders/AddOrder";
+import CustomerDetails from "./components/dashboard/customers/CustomerDetails";
 import Layout from "./layout";
 
 const router = createBrowserRouter([
@@ -64,6 +65,15 @@ const router = createBrowserRouter([
       {
         path: "orders/addOrder",
         element: <AddOrder />,
+      },
+      // customers
+      {
+        path: "customers",
+        element: <Customers />,
+      },
+      {
+        path: "customers/details",
+        element: <CustomerDetails />,
       },
     ],
   },
