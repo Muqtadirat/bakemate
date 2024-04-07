@@ -229,5 +229,47 @@
       "price": 5000,
       "status": "In progress"
     }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Inactive"
+    },
+    {
+      "id": "3",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Inactive"
+    },
+    {
+      "id": "5",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Active"
+    }
   ]
 }
