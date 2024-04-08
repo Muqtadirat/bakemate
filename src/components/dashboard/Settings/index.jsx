@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import { Tabs } from "@radix-ui/themes";
-import AccountSettings from "./AccountSettings";
-import Support from "./Support";
-// import UserPanel from "./user-management/UserPanel";
+import AccountSettings from "./account-settings";
+import Support from "./support";
 import UserManagement from "./user-management";
+import Notifcation from "./notification-management";
 
 const Settings = () => {
   return (
@@ -14,6 +14,9 @@ const Settings = () => {
         </Tabs.Trigger>
         <Tabs.Trigger value="user" className="hover:cursor-pointer">
           User Management
+        </Tabs.Trigger>
+        <Tabs.Trigger value="notification" className="hover:cursor-pointer">
+          Notifcation Management
         </Tabs.Trigger>
         <Tabs.Trigger value="support" className="hover:cursor-pointer">
           Support
@@ -27,6 +30,9 @@ const Settings = () => {
         <Tabs.Content value="user">
          <UserManagement />
           <Outlet />
+        </Tabs.Content>
+        <Tabs.Content value="notification">
+        <Notifcation />
         </Tabs.Content>
         <Tabs.Content value="support">
           <Support />

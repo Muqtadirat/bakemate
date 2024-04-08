@@ -45,10 +45,10 @@ const UserPanel = () => {
 
       {/* Table */}
       <div className="mt-8 px-5 pb-5 pt-8 bg-white">
-        <div className="border-b grid grid-cols-7 py-4 px-3 text-grey-400 font-medium">
-          <p>Full Name</p>
-          <p>Email</p>
-          <p>Phone Number</p>
+        <div className="border-b grid grid-cols-10 gap-4 py-4 px-3 text-grey-400 font-medium">
+          <p className="col-span-2">Full Name</p>
+          <p className="col-span-2">Email</p>
+          <p className="col-span-2">Phone Number</p>
           <p>Gender</p>
           <p>Role</p>
           <p>Status</p>

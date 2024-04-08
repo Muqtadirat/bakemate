@@ -8,10 +8,12 @@ const Button = ({
   className,
   onClickHandler,
 }) => {
-  const baseStyle = "border-2 border-transparent py-2 rounded-lg";
+  const baseStyle =
+    "border-2 border-transparent py-2 rounded-lg transition-all delay-75 ease-in duration-300 hover:scale-105";
 
   const variantStyles = {
-    primary: "text-white bg-primary-800 rounded px-4",
+    primary:
+      "text-white bg-primary-800 rounded px-4 hover:text-primary-800 hover:bg-white hover:border-2 hover:border-primary-800",
     secondary: "text-gray-900 bg-lime-600",
     unique: "text-purple-900 bg-lime-600",
   };
