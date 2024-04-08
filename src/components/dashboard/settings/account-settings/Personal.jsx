@@ -12,6 +12,7 @@ const Personal = () => {
               labelClass="text-black/50"
               name="fname"
               id="fname"
+              type="text"
             />
           </div>
           <div className="w-full">
@@ -20,6 +21,7 @@ const Personal = () => {
               labelClass="text-black/50"
               name="email"
               id="email"
+              type="email"
             />
           </div>
         </div>
@@ -30,6 +32,7 @@ const Personal = () => {
               labelClass="text-black/50"
               name="number"
               id="number"
+              type="tel"
             />
           </div>
           <div className="w-full">
@@ -38,11 +41,15 @@ const Personal = () => {
               labelClass="text-black/50"
               name="country"
               id="country"
+              type="text"
+              
             />
           </div>
         </div>
 
-        <p className="text-right text-primary-800 font-medium text-lg">Edit</p>
+        <p className="text-right text-primary-800 font-medium text-lg hover:cursor-pointer">
+          Edit
+        </p>
       </Form>
     </>
   );

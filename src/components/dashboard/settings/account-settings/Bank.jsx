@@ -16,6 +16,7 @@ const Bank = () => {
               labelClass="text-black/50"
               name="bname"
               id="bname"
+              type="text"
             />
           </div>
           <div className="w-full">
@@ -24,8 +25,10 @@ const Bank = () => {
               labelClass="text-black/50"
               name="accNumber"
               id="accNumber"
+              type="number"
             />
           </div>
+          
         </div>
         <div className="flex gap-[60px] mb-[30px]">
           <div className="w-full">
@@ -34,6 +37,7 @@ const Bank = () => {
               labelClass="text-black/50"
               name="accName"
               id="accName"
+              type="text"
             />
           </div>
           <div className="w-full"></div>

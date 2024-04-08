@@ -12,6 +12,7 @@ const Security = () => {
               labelClass="text-black/50"
               name="password"
               id="password"
+              type="password"
             />
           </div>
           <div className="w-full">
@@ -20,6 +21,7 @@ const Security = () => {
               labelClass="text-black/50"
               name="confirmPassword"
               id="confirmPassword"
+              type="password"
             />
           </div>
         </div>
