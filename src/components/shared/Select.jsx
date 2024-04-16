@@ -1,7 +1,7 @@
 const Select = ({ label, id, name, children, onChangeHandler }) => {
   return (
     <div>
-      <label for="cars">
+      <label htmlFor={id}>
         {label}
         <select
           name={name}

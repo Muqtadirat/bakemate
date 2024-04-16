@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <Sidebar />
       </aside>
 
-      <main className="ml-[224px] w-full h-screen bg-peach-100 pb-20">
+      <main className="ml-[224px] w-full  bg-peach-100 pb-20">
         <header className="h-14 pt-4 pb-16 border-b-2">
           <Topbar />
         </header>

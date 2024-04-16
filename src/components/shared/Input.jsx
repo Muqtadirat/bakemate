@@ -17,6 +17,7 @@ const Input = ({
   const variantStyles = {
     primary:
       "focus:outline-none focus:ring-1 focus:border-primary-800 focus:ring-primary-800",
+    table: "border-0 outline-0 focus:border-b-2 border-b-primary-800",
     search:
       "w-[25rem] border-grey-300 focus:outline-none focus:border-primary-800 focus:ring-primary-800",
   };

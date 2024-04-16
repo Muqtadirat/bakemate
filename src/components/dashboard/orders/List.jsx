@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import fetchOrders from "src/lib/api/fetchOrders";
 import OrdersTable from "./OrdersTable";
+import Filter from "./Filter";
 import { Pagination } from "src/components/shared";
 import { Tabs, TabList, Tab, TabPanel } from "react-aria-components";
 
@@ -90,24 +91,27 @@ const List = () => {
   return (
     <>
       <Tabs selectedKey={selectedTab} onSelectionChange={setSelectedTab}>
-        <TabList className="flex gap-8 mt-8 py-2">
-          {tabs.map((tab) => {
-            return (
-              <Tab
-                key={tab.id}
-                id={tab.id}
-                className={({ isSelected }) =>
-                  isSelected
-                    ? "hover:cursor-pointer px-4 font-medium text-primary-800 border-b-2 border-b-primary-800"
-                    : "hover:cursor-pointer px-4"
-                }
-              >
-                {tab.title}
-              </Tab>
-            );
-          })}
-        </TabList>
+        <div className="flex items-baseline justify-between">
+          <TabList className="flex gap-8 mt-8 py-2">
+            {tabs.map((tab) => {
+              return (
+                <Tab
+                  key={tab.id}
+                  id={tab.id}
+                  className={({ isSelected }) =>
+                    isSelected
+                      ? "hover:cursor-pointer px-4 font-medium text-primary-800 border-b-2 border-b-primary-800"
+                      : "hover:cursor-pointer px-4"
+                  }
+                >
+                  {tab.title}
+                </Tab>
+              );
+            })}
+          </TabList>
 
+          <div className="mr-20"><Filter/> </div>
+        </div>
         {tabs.map((tab) => (
           <TabPanel key={tab.id} id={tab.id}>
             <div className="grid grid-cols-8 px-4 py-4 mt-4 border-b-2 border-b-grey-300  font-medium">
@@ -115,18 +119,19 @@ const List = () => {
               <p>Order Date</p>
               <p>Order ID</p>
               <p>Product</p>
-              <p>Qty</p>
               <p>Price</p>
               <p>Status</p>
+              <p>Action</p>
             </div>
 
             {getPageOrders(tab.id).map((order) => (
               <OrdersTable
+                key={order.id}
                 customer={order.customer}
                 date={order.date}
                 id={order.id}
-                product={order.product}
                 quantity={order.quantity}
+                product={order.product}
                 price={order.price}
                 status={order.status}
               />

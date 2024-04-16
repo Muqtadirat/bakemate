@@ -14,7 +14,8 @@ const Button = ({
   const variantStyles = {
     primary:
       "text-white bg-primary-800 rounded px-4 hover:text-primary-800 hover:bg-white hover:border-2 hover:border-primary-800",
-    secondary: "text-gray-900 bg-lime-600",
+    secondary:
+      "text-grey-500 border border-grey-500 rounded px-4 hover:text-primary-800 hover:bg-grey-500 hover:text-white",
     unique: "text-purple-900 bg-lime-600",
   };
 
