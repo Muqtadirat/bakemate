@@ -5,9 +5,10 @@ import { Toaster } from "react-hot-toast";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./index.css";
-import { HomePage, ErrorPage, Login, SignUp, Dashboard } from "./pages";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import {  ErrorPage, Login, SignUp, Dashboard } from "./pages";
 import { Settings, Products, Orders, Customers } from "./components/dashboard";
-import CreateUser from "./components/dashboard/settings/user-management/CreateUser";
+import CreateUser from "./components/dashboard/Settings/user-management/CreateUser";
 import AddProduct from "./components/dashboard/products/AddProduct";
 import AddOrder from "./components/dashboard/orders/AddOrder";
 import CustomerDetails from "./components/dashboard/customers/CustomerDetails";
@@ -16,13 +17,14 @@ import Layout from "./layout";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    // element: <HomePage />,
+    element: <Login />,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
+  // {
+  //   path: "/login",
+  //   element: <Login />,
+  // },
   {
     path: "/signup",
     element: <SignUp />,
@@ -80,10 +82,12 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Theme>
-      <Toaster position="bottom-right" toastOptions={{ duration: 3000 }} />
-      <RouterProvider router={router} />
-    </Theme>
-  </React.StrictMode>
+  <GoogleOAuthProvider>
+    <React.StrictMode>
+      <Theme>
+        <Toaster position="bottom-right" toastOptions={{ duration: 3000 }} />
+        <RouterProvider router={router} />
+      </Theme>
+    </React.StrictMode>
+  </GoogleOAuthProvider>
 );

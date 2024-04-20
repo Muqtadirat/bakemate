@@ -7,6 +7,7 @@ import { Input, Button } from "../components/shared";
 import { Eye, EyeOff } from "lucide-react";
 import loginUser from "../lib/api/loginUser";
 import CakeImg from "../assets/form-cake.png";
+import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,7 +68,7 @@ const Login = () => {
         />
       </section>
 
-      <section className="w-screen flex flex-col gap-10 justify-center items-center">
+      <section className="w-screen flex flex-col gap-5 justify-center items-center">
         <div className="md:w-[35rem] flex flex-col gap-10">
           <div>
             <h1 className="text-3xl font-bold">Login</h1>
@@ -103,11 +104,7 @@ const Login = () => {
                 onClick={togglePasswordVisbility}
                 className="absolute top-6 bottom-0 right-0 pr-6"
               >
-                {showPassword ? (
-                  <EyeOff size={18} />
-                ) : (
-                  <Eye size={18} />
-                )}
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
             <p>
@@ -129,9 +126,9 @@ const Login = () => {
           </Form>
         </div>
 
-        <div>
-          <p>Or continue with</p>
-        </div>
+        <p>Or</p>
+
+        <GoogleLogin />
 
         <p>
           {"Don't"} have an account? {""}

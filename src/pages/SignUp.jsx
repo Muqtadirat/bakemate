@@ -6,6 +6,7 @@ import registerUser from "../lib/api/registerUser";
 import { Input, Button, CheckBox } from "../components/shared";
 import { Eye, EyeOff } from "lucide-react";
 import CakeImg from "../assets/form-cake.png";
+import { GoogleLogin } from "@react-oauth/google";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -75,8 +76,8 @@ const SignUp = () => {
         />
       </section>
 
-      <section className="w-screen flex flex-col gap-10 justify-center items-center">
-        <div className="md:w-[35rem] flex flex-col gap-6">
+      <section className="w-screen flex justify-center items-center">
+        <div className="md:w-[35rem] flex flex-col gap-3">
           <div>
             <h1 className="text-3xl font-bold mb-4">
               Welcome to <span className="text-primary-300">Bakemate</span>,
@@ -173,20 +174,21 @@ const SignUp = () => {
 
             <Button
               variant="primary"
-              className="mt-5 font-medium hover:bg-primary-600"
+              className="mt-3 font-medium hover:bg-primary-600"
             >
               Create Account
             </Button>
           </Form>
 
-          <div className="self-center">
-            <p>Or continue with</p>
+          <div className="self-center font-bold">
+            <p>Or</p>
           </div>
+          <GoogleLogin />
 
           <p>
             Already have an account? {""}
             <Link
-              to="/login"
+              to="/"
               className="text-primary-400 font-semibold hover:text-primary-600"
             >
               Login
