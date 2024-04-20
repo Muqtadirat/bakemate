@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import { Tabs } from "@radix-ui/themes";
-import AccountSettings from "./account-settings/index.jsx";
-import Support from "./support/index";
-import UserManagement from "./user-management/index";
-import Notifcation from "./notification-management/index";
+import AccountSettings from "./account-settings";
+import Support from "./support";
+import UserManagement from "./user-management";
+import Notifcation from "./notification-management";
 
 const Settings = () => {
   return (
