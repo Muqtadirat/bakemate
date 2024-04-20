@@ -10,12 +10,16 @@ const Input = ({
   value,
   className,
   variant,
+  labelClass,
 }) => {
-  const baseStyle = "w-full py-2 px-2 border-2 border-gray-700  rounded-lg";
+  const baseStyle = "py-2 px-2 border-2 w-full border-grey-300 rounded-lg";
 
   const variantStyles = {
     primary:
-      "focus:outline-none focus:ring-1 focus:border-primary-200 focus:ring-primary-200",
+      "focus:outline-none focus:ring-1 focus:border-primary-800 focus:ring-primary-800",
+    table: "border-0 outline-0 focus:border-b-2 border-b-primary-800",
+    search:
+      "w-[25rem] border-grey-300 focus:outline-none focus:border-primary-800 focus:ring-primary-800",
   };
 
   const variantStyle = variantStyles[variant] || "";
@@ -24,7 +28,7 @@ const Input = ({
 
   return (
     <div className="flex flex-col">
-      <label htmlFor={id} className="text-sm mb-1">
+      <label htmlFor={id} className={labelClass}>
         {label}
       </label>
       <input

@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import Form from "../components/form";
 import registerUser from "../lib/api/registerUser";
 import { Input, Button, CheckBox } from "../components/shared";
-import { EyeOpenIcon, EyeClosedIcon } from "@radix-ui/react-icons";
+import { Eye, EyeOff } from "lucide-react";
 import CakeImg from "../assets/form-cake.png";
 
 const SignUp = () => {
@@ -19,8 +19,8 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
-    const togglePasswordVisbility = (e) => {
-      e.preventDefault()
+  const togglePasswordVisbility = (e) => {
+    e.preventDefault();
     setShowPassword(!showPassword);
   };
 
@@ -127,7 +127,7 @@ const SignUp = () => {
                 onClick={togglePasswordVisbility}
                 className="absolute top-6 bottom-0 right-0 pr-6"
               >
-                {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
 
@@ -146,7 +146,7 @@ const SignUp = () => {
                 onClick={togglePasswordVisbility}
                 className="absolute top-6 bottom-0 right-0 pr-6"
               >
-                {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
 
