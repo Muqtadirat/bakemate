@@ -8,7 +8,7 @@ import "./index.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import {  ErrorPage, Login, SignUp, Dashboard } from "./pages";
 import { Settings, Products, Orders, Customers } from "./components/dashboard";
-import CreateUser from "./components/dashboard/Settings/user-management/CreateUser";
+// import CreateUser from "./components/dashboard/Settings/user-management/CreateUser";
 import AddProduct from "./components/dashboard/products/AddProduct";
 import AddOrder from "./components/dashboard/orders/AddOrder";
 import CustomerDetails from "./components/dashboard/customers/CustomerDetails";
@@ -46,10 +46,10 @@ const router = createBrowserRouter([
         path: "settings",
         element: <Settings />,
       },
-      {
-        path: "settings/createUser",
-        element: <CreateUser />,
-      },
+      // {
+      //   path: "settings/createUser",
+      //   element: <CreateUser />,
+      // },
       // Products
       {
         path: "products",

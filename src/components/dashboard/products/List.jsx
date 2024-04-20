@@ -114,7 +114,7 @@ const List = () => {
       <div>
         <Tabs selectedKey={selectedTab} onSelectionChange={setSelectedTab}>
           <Skeleton loading={loading ? true : false}>
-            <TabList className="flex gap-20 justify-center mt-8 rounded-2xl px-8 py-2 border border-grey-200">
+            <TabList className="flex gap-10 justify-center mt-8 rounded-2xl px-8 py-2 border border-grey-200">
               {tabs.map((tab) => {
                 return (
                   <Tab
