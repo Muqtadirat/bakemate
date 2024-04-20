@@ -1,0 +1,275 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Bake",
+      "email": "Bakemate@gmail.com",
+      "password": "Bakery1"
+    },
+    {
+      "id": "e614",
+      "email": "k@gmail.com",
+      "password": "Ijjjjjjj"
+    }
+  ],
+  "data": [
+    {
+      "totalSales": 12,
+      "totalCustomers": 4,
+      "totalOrders": 8,
+      "inventoryStatus": 32,
+      "salesAnalyticsGraph": {
+        "January": 9,
+        "Febuary": 4,
+        "March": 6,
+        "April": 7,
+        "May": 2,
+        "June": 4,
+        "July": 1,
+        "August": 3,
+        "September": 4,
+        "October": 5,
+        "November": 5,
+        "December": 2
+      },
+      "id": "3225"
+    }
+  ],
+  "products": [
+    {
+      "name": "Croissant",
+      "category": "Pastries",
+      "price": 1500,
+      "stock": 22,
+      "created": "01/02/24",
+      "lastUpdated": "06/02/24",
+      "image": "https://i.pinimg.com/236x/7b/af/d5/7bafd502fb71bade87d97ba2619a5205.jpg",
+      "id": "1"
+    },
+    {
+      "name": "Doughnut",
+      "category": "Pastries",
+      "price": 1000,
+      "stock": 12,
+      "created": "01/02/24",
+      "lastUpdated": "06/02/24",
+      "image": "https://i.pinimg.com/236x/2f/63/a7/2f63a79cf2976c1d54593b4340783f9c.jpg",
+      "id": "2"
+    },
+    {
+      "name": "Cupcake",
+      "category": "Pastries",
+      "price": 2500,
+      "stock": 8,
+      "created": "11/03/24",
+      "lastUpdated": "11/03/24",
+      "image": "https://i.pinimg.com/236x/6d/d3/f4/6dd3f426534070096400f54cd7a8f731.jpg",
+      "id": "3"
+    },
+    {
+      "name": "Chocolate Strawberry Cake",
+      "category": "Cake",
+      "price": 12500,
+      "stock": 0,
+      "created": "11/03/24",
+      "lastUpdated": "11/03/24",
+      "image": "https://i.pinimg.com/236x/9d/25/93/9d2593780fe22eba7acf1ea6e9e57110.jpg",
+      "id": "4"
+    },
+    {
+      "name": "Croissant",
+      "category": "Pastries",
+      "price": 1500,
+      "stock": 22,
+      "created": "01/02/24",
+      "lastUpdated": "06/02/24",
+      "image": "https://i.pinimg.com/236x/7b/af/d5/7bafd502fb71bade87d97ba2619a5205.jpg",
+      "id": "5"
+    },
+    {
+      "name": "Doughnut",
+      "category": "Pastries",
+      "price": 1000,
+      "stock": 12,
+      "created": "01/02/24",
+      "lastUpdated": "06/02/24",
+      "image": "https://i.pinimg.com/236x/2f/63/a7/2f63a79cf2976c1d54593b4340783f9c.jpg",
+      "id": "6"
+    },
+    {
+      "name": "Cupcake",
+      "category": "Pastries",
+      "price": 2500,
+      "stock": 8,
+      "created": "11/03/24",
+      "lastUpdated": "11/03/24",
+      "image": "https://i.pinimg.com/236x/6d/d3/f4/6dd3f426534070096400f54cd7a8f731.jpg",
+      "id": "7"
+    },
+    {
+      "name": "Chocolate Strawberry Cake",
+      "category": "Cake",
+      "price": 12500,
+      "stock": 0,
+      "created": "11/03/24",
+      "lastUpdated": "11/03/24",
+      "image": "https://i.pinimg.com/236x/9d/25/93/9d2593780fe22eba7acf1ea6e9e57110.jpg",
+      "id": "8"
+    },
+    {
+      "name": "Croissant",
+      "category": "Pastries",
+      "price": 1500,
+      "stock": 22,
+      "created": "01/02/24",
+      "lastUpdated": "06/02/24",
+      "image": "https://i.pinimg.com/236x/7b/af/d5/7bafd502fb71bade87d97ba2619a5205.jpg",
+      "id": "9"
+    },
+    {
+      "name": "Doughnut",
+      "category": "Pastries",
+      "price": 1000,
+      "stock": 12,
+      "created": "01/02/24",
+      "lastUpdated": "06/02/24",
+      "image": "https://i.pinimg.com/236x/2f/63/a7/2f63a79cf2976c1d54593b4340783f9c.jpg",
+      "id": "10"
+    },
+    {
+      "name": "Cupcake",
+      "category": "Pastries",
+      "price": 2500,
+      "stock": 8,
+      "created": "11/03/24",
+      "lastUpdated": "11/03/24",
+      "image": "https://i.pinimg.com/236x/6d/d3/f4/6dd3f426534070096400f54cd7a8f731.jpg",
+      "id": "11"
+    },
+    {
+      "name": "Chocolate Strawberry Cake",
+      "category": "Cake",
+      "price": 12500,
+      "stock": 0,
+      "created": "11/03/24",
+      "lastUpdated": "11/03/24",
+      "image": "https://i.pinimg.com/236x/9d/25/93/9d2593780fe22eba7acf1ea6e9e57110.jpg",
+      "id": "12"
+    }
+  ],
+  "subUsers": [
+    {
+      "id": "1",
+      "fname": "Bake",
+      "lname": "mate",
+      "email": "Bakemate@gmail.com",
+      "number": 19999999,
+      "gender": "Male",
+      "role": "Admin",
+      "active": true,
+      "avatar": "https://i.pinimg.com/236x/1e/ff/53/1eff530e292d13cb4088062614b9eed8.jpg"
+    },
+    {
+      "id": "2",
+      "fname": "Sugar",
+      "lname": "Creme",
+      "email": "Sugar@gmail.com",
+      "number": 86637777,
+      "gender": "Other",
+      "role": "Admin",
+      "active": false,
+      "avatar": "https://i.pinimg.com/736x/d4/dc/c0/d4dcc00e29b7b396ffe319600385e185.jpg"
+    },
+    {
+      "id": "3",
+      "fname": "Cake",
+      "lname": "Boss",
+      "email": "sweet@gmail.com",
+      "number": 343333330,
+      "gender": "Female",
+      "role": "Admin",
+      "active": true,
+      "avatar": "https://i.pinimg.com/236x/06/f5/4e/06f54e0f48897f2c4e12a06f7af7eba5.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": "2090",
+      "customer": "Sugar Creme",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "Completed"
+    },
+    {
+      "id": "9811",
+      "customer": "Sugar Creme",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "Pending"
+    },
+    {
+      "id": "5233",
+      "customer": "Velvet",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "Cancelled"
+    },
+    {
+      "id": "3222",
+      "customer": "Sugar Creme",
+      "date": "02/02/2024",
+      "product": "Scotch eggs",
+      "quantity": 4,
+      "price": 5000,
+      "status": "In progress"
+    }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Inactive"
+    },
+    {
+      "id": "3",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Inactive"
+    },
+    {
+      "id": "5",
+      "name": "Rosemarie Boyer DDS",
+      "email": "me@myself.com",
+      "number": "692-584-6280",
+      "address": "142 Isabel Coves",
+      "status": "Active"
+    }
+  ]
+}
