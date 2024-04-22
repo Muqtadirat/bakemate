@@ -12,12 +12,12 @@ const Input = ({
   variant,
   labelClass,
 }) => {
-  const baseStyle = "py-2 px-2 border-2 w-full border-grey-300 rounded-lg";
+  const baseStyle = "py-2 px-2 border-grey-300 border-2 w-full  rounded-lg";
 
   const variantStyles = {
     primary:
       "focus:outline-none focus:ring-1 focus:border-primary-800 focus:ring-primary-800",
-    table: "border-0 outline-0 focus:border-b-2 border-b-primary-800",
+    table: "rounded-none border-y-0 border-x-0 outline-0 focus:border-b-2 border-b-primary-800",
     search:
       "w-[25rem] border-grey-300 focus:outline-none focus:border-primary-800 focus:ring-primary-800",
   };
