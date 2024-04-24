@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import Form from "../components/form";
 import { Input, Button } from "../components/shared";
 import { Eye, EyeOff } from "lucide-react";
-import loginUser from "../lib/api/loginUser";
+// import loginUser from "../lib/api/loginUser";
 import CakeImg from "../assets/form-cake.png";
 import { GoogleLogin } from "@react-oauth/google";
 
@@ -31,32 +31,54 @@ const Login = () => {
     }));
   };
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
 
-    const { email, password } = formData;
+  //   const { email, password } = formData;
 
-    try {
-      const data = await loginUser({
-        email,
-        password,
+  //   try {
+  //     const data = await loginUser({
+  //       email,
+  //       password,
+  //     });
+
+  //     if (data.error) {
+  //       toast.error(data.error, {
+  //         position: "top-center",
+  //       });
+  //     } else {
+  //       setFormData({});
+  //       toast.success("Login successful", {
+  //         position: "top-center",
+  //       });
+  //       navigate("/dashboard");
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+const handleLogin = async (e) => {
+  e.preventDefault();
+
+  const { email, password } = formData;
+
+  try {
+       if (!email && !password) {
+      toast.error("Please provide both email and password", {
+        position: "top-center",
       });
-
-      if (data.error) {
-        toast.error(data.error, {
-          position: "top-center",
-        });
-      } else {
-        setFormData({});
-        toast.success("Login successful", {
-          position: "top-center",
-        });
-        navigate("/dashboard");
-      }
-    } catch (error) {
-      console.log(error);
+      return;
     }
-  };
+
+    setFormData({});
+    toast.success("Login successful", { position: "top-center" });
+    navigate("/dashboard");
+   
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 
   return (
     <div className="Login flex h-screen">

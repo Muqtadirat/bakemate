@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Form from "../components/form";
-import registerUser from "../lib/api/registerUser";
+// import registerUser from "../lib/api/registerUser";
 import { Input, Button, CheckBox } from "../components/shared";
 import { Eye, EyeOff } from "lucide-react";
 import CakeImg from "../assets/form-cake.png";
@@ -37,30 +37,57 @@ const SignUp = () => {
     }));
   };
 
+  // const signupUser = async (e) => {
+  //   e.preventDefault();
+
+  //   const { fullName, email, password, confirmPassword } = formData;
+
+  //   try {
+  //     const data = await registerUser({
+  //       fullName,
+  //       email,
+  //       password,
+  //       confirmPassword,
+  //     });
+
+  //     if (data.error) {
+  //       toast.error(data.error, {
+  //         position: "top-center",
+  //       });
+  //     } else {
+  //       setFormData({});
+  //       toast.success("Registration successful", {
+  //         position: "top-center",
+  //       });
+  //       navigate("/dashboard");
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   const signupUser = async (e) => {
     e.preventDefault();
 
-    const { fullName, email, password, confirmPassword } = formData;
+    const { email, password, fullName, confirmPassword } = formData;
 
     try {
-      const data = await registerUser({
-        fullName,
-        email,
-        password,
-        confirmPassword,
-      });
-
-      if (data.error) {
-        toast.error(data.error, {
+      if (!email || !password || !fullName) {
+        toast.error("Please fill in all details", {
           position: "top-center",
         });
-      } else {
-        setFormData({});
-        toast.success("Registration successful", {
-          position: "top-center",
-        });
-        navigate("/dashboard");
+        return;
       }
+
+      if (password !== confirmPassword) {
+        toast.error("Passwords do not match", {
+          position: "top-center",
+        });
+        return;
+      }
+
+      setFormData({});
+      toast.success("Login successful", { position: "top-center" });
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
