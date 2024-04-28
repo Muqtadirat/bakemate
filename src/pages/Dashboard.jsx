@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import fetchData from "../lib/api/fetchData";
 import { KPIData } from "../lib/constants";
-import { KPICard, BarChart } from "../components/shared";
+import { KPICard, BarChart,PieChart } from "../components/shared";
+import RecentOrders from "src/components/dashboard/RecentOrders";
+import TopProducts from "src/components/dashboard/TopProducts";
 
 const Dashboard = () => {
   const [KPI, setKPI] = useState([]);
@@ -43,8 +45,14 @@ const Dashboard = () => {
         })}
       </section>
 
-      <section>
+      <section className="flex gap-14">
         <BarChart />
+        <PieChart />
+      </section>
+
+      <section className="flex gap-9 ">
+        <RecentOrders />
+        <TopProducts/>
       </section>
     </div>
   );

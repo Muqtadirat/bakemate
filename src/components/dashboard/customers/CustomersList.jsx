@@ -38,7 +38,7 @@ const CustomersList = () => {
 
   return (
     <div className="mt-16">
-      <h3 className="text-xl font-medium">Customer's List</h3>
+      <h3 className="text-xl font-medium">Customer&apos;s List</h3>
       <div className="grid grid-cols-5 pb-5 border-b border-b-[#EEEEEE] mt-12 text-grey-400 font-medium">
         <p>Customer Name</p>
         <p>Email</p>

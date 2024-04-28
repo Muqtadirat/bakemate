@@ -4,9 +4,7 @@ import clsx from "clsx";
 import { Logo } from "../icons";
 import {
   List,
-  Wallet,
   UsersRound,
-  Bell,
   Settings,
   LayoutDashboard,
   PackageSearch,
@@ -34,11 +32,6 @@ const tabs = [
     title: "Customers",
     href: "customers",
     Icon: <UsersRound size={18} strokeWidth={2.5} />,
-  },
-  {
-    title: "Transaction",
-    href: "transaction",
-    Icon: <Wallet size={18} strokeWidth={2.5} />,
   },
   {
     title: "Settings",

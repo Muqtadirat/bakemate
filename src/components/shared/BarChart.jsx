@@ -4,7 +4,6 @@ import {
   Rectangle,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   //   ResponsiveContainer,
@@ -28,26 +27,26 @@ const data = [
 
 const SalesBarChart = () => {
   return (
-    <Card className="border bg-white">
+    <Card className="bg-white w-[648px] h-[336px]">
+      <h2 className="ml-10 my-5 font-medium">Sales Analytics</h2>
       <BarChart
-        width={800}
-        height={400}
+        width={595}
+        height={260}
         data={data}
         margin={{
           top: 5,
-          right: 30,
-          left: 20,
+          // right: 30,
+          // left: 20,
           bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="month" />
+        <XAxis dataKey="month" className="text-sm font-medium" />
         <YAxis />
         <Tooltip />
         <Legend />
         <Bar
           dataKey="value"
-          fill="#8C4C26"
+          fill="#59150E"
           activeBar={<Rectangle fill="#F28B50" stroke="blue" />}
         />
       </BarChart>
